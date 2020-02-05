@@ -1,0 +1,18 @@
+<form [formGroup]="usersFilter">
+    <table style="width:100%">
+        <tr>
+          <th>First name<input formControlName="firstName"></th>
+          <th>Last name<input formControlName="lastName"></th>
+          <th>email<input formControlName="email"></th>
+          <th>gender<input formControlName="gender"></th>
+          <th>ip address<input formControlName="ipAddress"></th>
+        </tr>
+        <tr *ngFor="let user of filteredUsers">
+          <td>{{user.first_name}}</td>
+          <td>{{user.last_name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.gender}}</td>
+          <td>{{user.ip_address}}</td>
+        </tr>
+      </table>
+</form>
